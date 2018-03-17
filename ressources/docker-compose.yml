@@ -1,0 +1,9 @@
+version: "3"
+services:
+  jenkins_master:
+    build:
+      context: .
+    image: "jenkins/jenkins:2.111"
+    restart: "always"
+    environment:
+      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false ${jenkins_jvm_opts}"
