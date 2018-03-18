@@ -6,4 +6,7 @@ services:
     image: "jenkins/jenkins:2.111"
     restart: "always"
     environment:
-      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false ${jenkins_jvm_opts}"
+      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false"
+    ports:
+      - 8080:8080
+
